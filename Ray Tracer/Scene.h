@@ -7,14 +7,14 @@ using namespace rt;
 int geometryCount = 8;
 
 Geometry* scene[] = {
-    new Sphere( -50.0f,  -25.0f,  175.0f,   30.0f,    0.3f,  0.0f,  0.0f),
-    new Sphere( -10.0f,    0.0f,  100.0f,   10.0f,    0.3f,  0.3f,  0.0f),
-    new Sphere(   0.0f,    0.0f,  200.0f,   40.0f,    0.0f,  0.3f,  0.0f),
-    new Sphere(   0.0f,  -50.0f,  200.0f,   10.0f,    0.3f,  0.3f,  0.3f),
-    new Sphere(  10.0f,    0.0f,   20.0f,    5.0f,    0.0f,  0.3f,  0.3f),
-    new Sphere( -70.0f,    0.0f,  100.0f,   10.0f,    0.3f,  0.0f,  0.3f),
-    new Sphere(  50.0f,   25.0f,   75.0f,   50.0f,    0.0f,  0.0f,  0.3f),
-	new Sphere( -75.0f,   15.0f,   75.0f,    5.0f,   0.07f, 0.07f, 0.07f)
+    new Sphere(-50.0f, -25.0f, 175.0f, 30.0f, 0.1f,   0.0f,  0.0f, 0.3f, 0.0f, 0.0f, 0.7f, 0.0f, 0.0f, 10.0f),
+	new Sphere(-10.0f,   0.0f, 100.0f, 10.0f, 0.1f,   0.1f,  0.0f, 0.3f, 0.3f, 0.0f, 0.7f, 0.7f, 0.0f, 10.0f),
+	new Sphere(  0.0f,   0.0f, 200.0f, 40.0f, 0.0f,   0.1f,  0.0f, 0.0f, 0.3f, 0.0f, 0.0f, 0.7f, 0.0f, 10.0f),
+	new Sphere(  0.0f, -50.0f, 200.0f, 10.0f, 0.1f,   0.1f,  0.1f, 0.3f, 0.3f, 0.3f, 0.7f, 0.7f, 0.7f, 10.0f),
+	new Sphere( 10.0f,   0.0f,  20.0f,  5.0f, 0.0f,   0.1f,  0.1f, 0.0f, 0.3f, 0.3f, 0.0f, 0.7f, 0.7f, 10.0f),
+	new Sphere(-70.0f,   0.0f, 100.0f, 10.0f, 0.1f,   0.0f,  0.1f, 0.3f, 0.0f, 0.3f, 0.7f, 0.0f, 0.7f, 10.0f),
+	new Sphere( 50.0f,  25.0f,  75.0f, 50.0f, 0.0f,   0.0f,  0.1f, 0.0f, 0.0f, 0.3f, 0.0f, 0.0f, 0.7f, 10.0f),
+	new Sphere(-75.0f,  15.0f,  75.0f,  5.0f, 0.05f, 0.05f, 0.05f, 0.0f, 0.0f, 0.0f, 0.7f, 0.7f, 0.7f, 10.0f)
 };
 
 int lightCount = 2;

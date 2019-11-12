@@ -64,6 +64,14 @@ int main() {
 
     Image image(imageWidth, imageHeight);
 
+	Vector L; 
+	Vector C = viewPoint; 
+	Vector V; 
+	Vector E;
+	Vector N;
+	Vector T;
+	Vector R;
+
 	// ADD CODE HERE
 	for (auto i = 0; i < imageWidth; i++)
 	{
@@ -81,7 +89,32 @@ int main() {
 
 			if (in.valid())
 			{
-				image.setPixel(i, j, in.geometry()->color());
+				Color color = in.geometry()->color();
+				for (Light* light : lights)
+				{
+					L = light->position();
+					V = in.vec();
+					E = C - V;
+					E.normalize();
+					N = in.geometry()->normal(V);
+					T = L - V;
+					T.normalize();
+					R = N * (N * T) * 2 - T;
+					R.normalize();
+					color += in.geometry()->material().ambient() * light->ambient();
+					if (N*T > 0)
+					{
+						color += in.geometry()->material().diffuse() * light->diffuse() * (N * T);
+					}
+
+					if (E*R > 0)
+					{
+						color += in.geometry()->material().specular() * light->specular() * pow(E*R, in.geometry()->material().shininess());
+					}
+					color *= light->intensity();
+				}
+				
+				image.setPixel(i, j, color);
 			}
 			else
 			{

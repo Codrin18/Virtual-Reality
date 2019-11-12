@@ -1,2 +1,11 @@
 ﻿  main.cpp
+C:\Users\Codrin\Desktop\Virtual Reality\Ray Tracer\Scene.h(10,104): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Codrin\Desktop\Virtual Reality\Ray Tracer\Scene.h(11,101): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Codrin\Desktop\Virtual Reality\Ray Tracer\Scene.h(12,101): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Codrin\Desktop\Virtual Reality\Ray Tracer\Scene.h(13,101): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Codrin\Desktop\Virtual Reality\Ray Tracer\Scene.h(14,101): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Codrin\Desktop\Virtual Reality\Ray Tracer\Scene.h(15,101): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Codrin\Desktop\Virtual Reality\Ray Tracer\Scene.h(16,101): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Codrin\Desktop\Virtual Reality\Ray Tracer\Scene.h(17,101): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Codrin\Desktop\Virtual Reality\Ray Tracer\main.cpp(114,31): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
   Ray Tracer.vcxproj -> C:\Users\Codrin\Desktop\Virtual Reality\Ray Tracer\Debug\Ray Tracer.exe

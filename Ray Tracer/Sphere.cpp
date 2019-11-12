@@ -3,29 +3,44 @@
 using namespace rt;
 
 Intersection Sphere::getIntersection(const Line& line, float minDist, float maxDist) {
-	Intersection in;
+	//Intersection in;
 
 	// ADD CODE HERE
 	const auto A = line.dx() * line.dx();
 	const auto B = (line.dx() + line.dx()) * (line.x0() - this->center());
 	const auto C = (line.x0() - this->center()) * (line.x0() - this->center()) - this->radius() * this->radius();
 
-	const auto discriminant = B * B - 4 * A * C;
+	auto discriminant = B * B - 4 * A * C;
+	float x;
 
-	if (discriminant >= 0)
+	if (discriminant < 0)
 	{
-		auto x = ((-1) * B + sqrt(discriminant)) / (2 * A);
-		in._valid = true;
-		in._geometry = this;
-		in._t = x;
+		return Intersection(false, this, &line, 0);
+	}
+
+	discriminant = sqrt(discriminant);
+
+	float x0 = (-B + discriminant) / (2 * A);
+
+	float x1 = (-B - discriminant) / (2 * A);
+
+	if (x0 < x1)
+	{
+		x = x0;
 	}
 	else
 	{
-		in._valid = false;
+		x = x1;
 	}
 
+	if (x < minDist || x > maxDist)
+	{
+		return Intersection(false, this, &line, 0);
+	}
 
-    return in;
+	
+
+    return Intersection(true,this,&line,x);
 }
 
 
